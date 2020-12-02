@@ -1,9 +1,12 @@
 import { path } from "app-root-path";
 import { promises as fsPromises} from "fs";
-import { TargetConig } from "../model/config";
+import { ApplicationConfig } from "../model/config";
+import { PropType } from "../util/types";
 
 export default class ConfigurationService {
     private static instance: ConfigurationService;
+
+    private config?: ApplicationConfig;
 
     private constructor() {}
 
@@ -11,14 +14,12 @@ export default class ConfigurationService {
         return this.instance || (this.instance = new this());
     }
 
-    async getTargets() {
-        const jsonStr = await fsPromises.readFile(path + '/uploaderconfig.json', 'utf-8');
-        const json = JSON.parse(jsonStr);
-        const targets = json.targets;
-
-        const targetConfigs: TargetConig[] = []
-        for (const target of targets) targetConfigs.push(target);
+    async getConfig<K extends keyof ApplicationConfig>(key: K) {
+        if (!this.config) {
+            const jsonStr = await fsPromises.readFile(path + '/uploaderconfig.json', 'utf-8');
+            this.config = JSON.parse(jsonStr) as ApplicationConfig;
+        }
         
-        return targetConfigs;
+        return this.config[key] as PropType<ApplicationConfig, K>;
     }
 }

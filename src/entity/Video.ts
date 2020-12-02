@@ -22,7 +22,6 @@ export class Video {
 export enum VideoStatus {
     DISCOVERED = 'DISCOVERED',
     PENDING = 'PENDING',
-    DOWNLOADING = 'DOWNLOADING',
     UPLOADING = 'UPLOADING',
     UPLOADED = 'UPLOADED',
     FAILED = 'FAILED'

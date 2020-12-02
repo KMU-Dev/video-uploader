@@ -19,7 +19,7 @@ export default class TargetService {
 
     async updateTargets(targetConfigs: TargetConig[]) {
         const mapper = new ArrayMapper<Target>(new ModelMapper<TargetConig, Target>());
-        const newTargets = mapper.map(targetConfigs);
+        const newTargets = await mapper.map(targetConfigs);
 
         const targets = await this.getTargets();
 

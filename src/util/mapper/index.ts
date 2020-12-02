@@ -1,7 +1,7 @@
 import { Provider } from "./types";
 
 export interface Mapper<K, V> {
-    map: (source: K) => V
+    map: (source: K) => Promise<V>
 }
 
 type PropType<TObj, TProp extends keyof TObj> = TObj[TProp];
@@ -27,7 +27,7 @@ export class ModelMapper<K, V> implements Mapper<K, V> {
         return this as ModelMapper<K, V>;
     }
 
-    public map(source: K): V {
+    public async map(source: K): Promise<V> {
         const target: Record<string, any> = {};
         for (const key in source) {
             if (this.excludeFieldNames.includes(key)) continue;
@@ -40,7 +40,11 @@ export class ModelMapper<K, V> implements Mapper<K, V> {
             }
         }
 
-        for (const key in this.additionalFields) target[key] = this.additionalFields[key](source);
+        for (const key in this.additionalFields) {
+            const value = this.additionalFields[key](source);
+            if (value instanceof Promise) target[key] = await value;
+            else target[key] = value;
+        }
 
         return target as V;
     }

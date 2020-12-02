@@ -30,7 +30,12 @@ export default class VideoResolver {
             const videoId = hrefValue.split('/')[2];
             const videoName = hrefCheer.text()!.trim() + ".mp4";
             
-            const videoUrl = await this.resolveVideoUrl(videoId);
+            let videoUrl: string;
+            try {
+                videoUrl = await this.resolveVideoUrl(videoId);
+            } catch {
+                continue
+            }
             
             const videoInfo = {
                 id: +videoId, 
@@ -49,6 +54,8 @@ export default class VideoResolver {
         const html = await (await this.fetch(url)).text();
 
         const atobExp = html.match(/(media = JSON\.parse\( atob\(')(.*)('\)\))/);
+        if (!atobExp) throw new NotVideoError();
+
         const hashStr = (atobExp as string[])[2];
         const json = JSON.parse(Buffer.from(hashStr, 'base64').toString());
 
@@ -84,5 +91,11 @@ export default class VideoResolver {
                 this.cookies.set(key, value);
             }
         }
+    }
+}
+
+export class NotVideoError extends Error {
+    constructor() {
+        super('Searched item is not a video.');
     }
 }

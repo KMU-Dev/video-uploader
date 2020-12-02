@@ -116,7 +116,7 @@ dist
 .pnp.*
 
 # Google API Credentials
-credentials.json
+oauth2.keys.json
 
 # Typeorm config
 ormconfig.json

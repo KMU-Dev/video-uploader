@@ -1,0 +1,1 @@
+export type PropType<TObj, TKey extends keyof TObj> = TObj[TKey];

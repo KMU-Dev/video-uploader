@@ -29,7 +29,7 @@ export default class VideoService {
                         .excludeFields("status")
                         .addField("status", () => VideoStatus.DISCOVERED)
                         .addField("target", () => target);
-                const video = mapper.map(videoInfo);
+                const video = await mapper.map(videoInfo);
                 
                 const savedVideo = await this.videoRepository.save(video);
                 uploadVideos.push(savedVideo);
@@ -37,5 +37,13 @@ export default class VideoService {
         }
 
         return uploadVideos;
+    }
+
+    getVideoWithTarget(id: number) {
+        return this.videoRepository.findOne(id, { relations: ['target'] });
+    }
+
+    updateStatus(id: number, status: VideoStatus) {
+        return this.videoRepository.update(id, { status: status });
     }
 }

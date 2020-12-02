@@ -396,9 +396,9 @@ chokidar@^3.4.0:
     fsevents "~2.1.2"
 
 cli-highlight@^2.1.4:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/cli-highlight/-/cli-highlight-2.1.8.tgz#aa3130b481649d631ab913ae60becf81c69c3887"
-  integrity sha512-mFuTW5UOV3/S0wZE9/1b0EcAM0XOJIhoAWPhWm5voiJ6ugVBkvYBIEL7sbHo9sEtWdEmwDIWab32qpaRI3cfqQ==
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/cli-highlight/-/cli-highlight-2.1.9.tgz#4f4ecb05326d70d56d4b4249fabf9a70fb002497"
+  integrity sha512-t8RNIZgiI24i/mslZ8XT8o660RUj5ZbUJpEZrZa/BNekTzdC2LfMRAnt0Y7sgzNM4FGW5tmWg/YnbTH8o1eIOQ==
   dependencies:
     chalk "^4.0.0"
     highlight.js "^10.0.0"
@@ -595,9 +595,9 @@ domelementtype@1, domelementtype@^1.3.0, domelementtype@^1.3.1:
   integrity sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==
 
 domelementtype@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.0.2.tgz#f3b6e549201e46f588b59463dd77187131fe6971"
-  integrity sha512-wFwTwCVebUrMgGeAwRL/NhZtHAUyT9n9yg4IMDwf10+6iCMxSkVq9MGCVEH+QZWo1nNidy8kNvwmv4zWHDTqvA==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.1.0.tgz#a851c080a6d1c3d94344aed151d99f669edf585e"
+  integrity sha512-LsTgx/L5VpD+Q8lmsXSHW2WpA+eBlZ9HPf3erD1IoPF00/3JKHZ3BknUVA2QGDNu69ZNmyFmCWBSO45XjYKC5w==
 
 domhandler@^2.3.0:
   version "2.4.2"
@@ -1928,10 +1928,10 @@ typeorm@0.2.29:
     yargonaut "^1.1.2"
     yargs "^16.0.3"
 
-typescript@3.3.3333:
-  version "3.3.3333"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.3333.tgz#171b2c5af66c59e9431199117a3bcadc66fdcfd6"
-  integrity sha512-JjSKsAfuHBE/fB2oZ8NxtRTk5iGcg6hkYXMnZ3Wc+b2RSqejEqTaem11mHASMnFilHrax3sLK0GDzcJrekZYLw==
+typescript@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9"
+  integrity sha512-thGloWsGH3SOxv1SoY7QojKi0tc+8FnOmiarEGMbd/lar7QOEd3hvlx3Fp5y6FlDUGl9L+pd4n2e+oToGMmhRQ==
 
 url-template@^2.0.8:
   version "2.0.8"
@@ -2008,9 +2008,9 @@ xtend@^4.0.0:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-  integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
+  integrity sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==
 
 y18n@^5.0.5:
   version "5.0.5"

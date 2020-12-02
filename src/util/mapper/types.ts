@@ -1,1 +1,1 @@
-export type Provider<SourceType, Returned> = (source: SourceType) => Returned;
+export type Provider<SourceType, Returned> = (source: SourceType) => (Returned | Promise<Returned>);
