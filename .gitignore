@@ -123,3 +123,6 @@ ormconfig.yml
 
 # Video Uploader App config
 uploaderconfig.yaml
+
+# Helm chart test value
+charts/video-uploader/test/

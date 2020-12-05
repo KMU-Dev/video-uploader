@@ -22,7 +22,7 @@ COPY --chown=uploader:uploader package.json yarn.lock /app/
 RUN yarn --version && yarn
 
 # Copy application file
-COPY --chown=uploader:uploader dist/ .
+COPY --chown=uploader:uploader dist/ /app/
 
 # Expose app running port
 EXPOSE 3000
