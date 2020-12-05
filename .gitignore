@@ -122,4 +122,4 @@ oauth2.keys.json
 ormconfig.json
 
 # Video Uploader App config
-uploaderconfig.json
+uploaderconfig.yaml
