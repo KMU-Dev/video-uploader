@@ -8,3 +8,15 @@ lerna-debug.log*
 
 # node modules
 node_modules/
+
+# helm charts
+charts/
+
+# Google API Credentials
+oauth2.keys.json
+
+# Typeorm config
+ormconfig.yml
+
+# Video Uploader App config
+uploaderconfig.yaml

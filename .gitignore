@@ -119,7 +119,7 @@ dist
 oauth2.keys.json
 
 # Typeorm config
-ormconfig.json
+ormconfig.yml
 
 # Video Uploader App config
 uploaderconfig.yaml

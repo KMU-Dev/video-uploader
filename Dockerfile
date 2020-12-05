@@ -1,5 +1,9 @@
 FROM node:14.15.1-alpine
 
+LABEL maintainer="Chao Tzu-Hsien"
+
+LABEL org.opencontainers.image.source https://github.com/KMU-Dev/video-uploader
+
 WORKDIR /app
 
 # Create a group and user
@@ -19,9 +23,6 @@ RUN yarn --version && yarn
 
 # Copy application file
 COPY --chown=uploader:uploader dist/ .
-
-# list content
-RUN ls -al .
 
 # Expose app running port
 EXPOSE 3000
