@@ -1,4 +1,4 @@
-FROM node:14.15.1-alpine
+FROM node:14.18.0-alpine
 
 LABEL maintainer="Chao Tzu-Hsien"
 
